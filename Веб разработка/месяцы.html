@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>месяцы</title>
+</head>
+<body>
+    <p>Введите число:</p>
+    <input type="text" id="langInput">
+    <button onclick="checkLanguage()">Выявить</button>
+    <p id="languageOutput"></p>
+
+    <script>
+        function checkLanguage() {
+            var lang = document.getElementById('langInput').value.toLowerCase();
+            var languageOutput = document.getElementById('languageOutput');
+
+            switch (lang) {
+            case "1": 
+                languageOutput.innerText = 'Январь 2024 год 31 день';
+                break;
+             case "2": 
+                languageOutput.innerText = 'Февраль 2024 год 29 день';
+                break;
+             case "3": 
+                languageOutput.innerText = 'Март 2024 год 31 день ';
+                break;
+             case "4": 
+                languageOutput.innerText = 'Апрель 2024 год 31 день';
+                break;
+            case "5": 
+                languageOutput.innerText = 'Май 2024 год 31 день';
+                break;
+            case "6": 
+                languageOutput.innerText = 'Июнь 2024 год 31 день';
+                break;
+            case "7": 
+                languageOutput.innerText = 'Июль 2024 год 31 день';
+                break;
+            case "8": 
+                languageOutput.innerText = 'Август 2024 год 31 день';
+                break;
+            case "9": 
+                languageOutput.innerText = 'Сентябрь 2024 год 31 день';
+                break;
+            case "10": 
+                languageOutput.innerText = 'Октябрь 2024 год 31 день';
+                break;
+            case "11": 
+                languageOutput.innerText = 'Ноябрь 2024 год 31 день';
+                break;
+            case "12": 
+                languageOutput.innerText = 'Декабрь 2024 год 31 день';
+                break;
+             default:
+                languageOutput.innerText = 'Такого месяца не существует';
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title></title>
+    <script>
+let a = 6;
+let b = 4;
+let c = 34;
+let d = 65;
+let e = 1;
+
+function swap(x,y) { 
+    return [y, x];
+}
+
+if (a < b) [a, b] = swap(a, b);
+
+if (a < c) [a, c] = swap(a, c);
+
+if (a < d) [a, d] = swap(a, d);
+
+if (a < e) [a, e] = swap(a, e);
+
+if (b < c) [b, c] = swap (b, c);
+
+if (b < d) [b, d] = swap (b, d);
+
+if (b < e) [b, e] = swap (b, e);
+
+if (c < d) [c, d] = swap (c, d);
+
+if (c < e) [c, e] = swap (c, e);
+
+if (d < e) [d, e] = swap (d, e);
+
+console.log(a, b, c, d, e); 
+
+    </script>
+</head>
+<body>
+</body>
+</html>

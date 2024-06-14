@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>вес</title>
+    </head>
+    <body>
+        <p>Введите вес боксера:</p>
+    <input type="text" id="WeightInput">
+    <button onclick="checkWeight()">Проверить</button>
+    <p id="WeightOutput"></p>
+
+    <script>
+        function checkWeight() {
+            var lang = parseInt(document.getElementById('WeightInput').value.toLowerCase()) 
+            var WeightOutput = document.getElementById('WeightOutput');
+
+    
+            if (lang < 60) { 
+                document.getElementById('WeightOutput').innerText = 'Легкий вес - до 60 кг';
+            }
+                
+            else if (lang < 64) {
+                WeightOutput.innerText = 'Первый полусредний вес - до 64 кг';
+            }
+
+            else if (lang < 69) {
+                WeightOutput.innerText = 'Полусредний вес - до 69 кг';
+             }
+             else {
+                WeightOutput.innerText = 'Не входит в категории'; 
+            }
+            }
+             
+        
+    </script>
+    </body>
+</html>

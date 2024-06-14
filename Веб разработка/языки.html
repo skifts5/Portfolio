@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>языки</title>
+</head>
+<body>
+    <p>Введите язык:</p>
+    <input type="text" id="langInput">
+    <button onclick="checkLanguage()">Проверить</button>
+    <p id="languageOutput"></p>
+
+    <script>
+        function checkLanguage() {
+            var lang = document.getElementById('langInput').value.toLowerCase();
+            var languageOutput = document.getElementById('languageOutput');
+
+            switch (lang) {
+                case "ru": 
+                    languageOutput.innerText = 'Русский';
+                    break;
+                case "en": 
+                    languageOutput.innerText = 'Английский';
+                    break;
+                case "fr": 
+                    languageOutput.innerText = 'Французский';
+                    break;
+                case "de": 
+                    languageOutput.innerText = 'Немецкий';
+                    break;
+                default:
+                    languageOutput.innerText = 'Язык неизвестен';
+            }
+        }
+    </script>
+</body>
+</html>

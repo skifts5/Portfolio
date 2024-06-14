@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Числа</title>
+</head>
+<script>
+function checkEvennumbers() {
+    const num1 = parseInt(document.getElementById("number1").value);
+    const num2 = parseInt(document.getElementById("number2").value);
+    const num3 = parseInt(document.getElementById("number3").value);
+    const num4 = parseInt(document.getElementById("number4").value);
+
+    const numbers = [num1, num2, num3, num4];
+    let evenCount = 0;
+    let evenNumbers = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            evenCount++;
+            evenNumbers.push(numbers[i]);
+        }
+    }
+
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = `Четных чисел: ${evenCount}. Четные числа: ${evenNumbers.join(", ")}`;
+}
+</script>
+<body>
+    <p>Введите четыре целых числа:</p>
+    <input type="number" id="number1" placeholder="Число 1">
+    <input type="number" id="number2" placeholder="Число 2">
+    <input type="number" id="number3" placeholder="Число 3">
+    <input type="number" id="number4" placeholder="Число 4">
+    <button onclick="checkEvennumbers()">Проверить</button>
+    <p id="result"></p>
+</body>
+</html>

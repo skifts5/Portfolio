@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Letters</title>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Введите слово">
+    <button onclick="displayLetters()">Вывести буквы</button>
+    <div id="output"></div>
+
+    <script>
+        function displayLetters() {
+            const userInput = document.getElementById("userInput").value;
+            const outputDiv = document.getElementById("output");
+            let result = "";
+            let missingLetters = "";
+
+            for (let i = 0; i < userInput.length; i++) {
+                const letter = userInput[i].toUpperCase();
+                if (letter === "М" || letter === "Ы") {
+                    result += letter;
+                }
+                else if (letter === "А") {
+                    result += letter;
+                }
+                else {
+                    missingLetters += letter;
+                }
+                
+            }
+            if (result) {
+                outputDiv.textContent = `Буквы: ${result}`;
+            }
+            else {
+                outputDiv.textContent = `В слове отсутствуют буквы "М" "Ы" "А".`;
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

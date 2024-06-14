@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>орапроп</title>
+</head>
+<body>
+    <script>
+        function findDigits() {
+            let input = '3456';
+            let number = parseInt(input); 
+
+            const digits = number.toString().split('').map(Number);
+            const evenDigits = digits.filter(digit => digit % 2 === 0);
+
+            if (evenDigits.length === 0) {
+                return "Нет четных цифр"; 
+            } else {
+                return 'Четные цифры: ' + evenDigits.join(', '); 
+            }
+        }
+        console.log(findDigits());
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Светофор</title>
+    <style>
+        .traffic-light {
+            width: 100px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .light {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px;
+            background-color: #ccc;
+        }
+        #red {
+            background-color: red;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        #green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="traffic-light">
+        <div id="red" class="light"></div>
+        <div id="yellow" class="light"></div>
+        <div id="green" class="light"></div>
+    </div>
+    <button onclick="toggleAutomatic()">Автоматически</button>
+    <button onclick="changeColor()">Сменить цвет</button>
+
+    <script>
+        let currentColorIndex = 0;
+        const colors = ['red', 'yellow', 'green'];
+        const lightElements = document.querySelectorAll('.light');
+        let automaticInterval;
+
+        function changeColor() {
+            lightElements[currentColorIndex].style.backgroundColor = '#ccc';
+            currentColorIndex = (currentColorIndex + 1) % colors.length; 
+            lightElements[currentColorIndex].style.backgroundColor = colors[currentColorIndex]; 
+        }
+
+        function toggleAutomatic() {
+            if (automaticInterval) {
+                clearInterval(automaticInterval); 
+                automaticInterval = null;
+            } else {
+                automaticInterval = setInterval(changeColor, 1000);
+            }
+        }
+    </script>
+</body>
+</html>

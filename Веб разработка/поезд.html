@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поезд</title>
+</head>
+
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background: url(charles-forerunner-gapYVvUg1M8-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #HourInput, #MinuteInput {
+        height: 20px;
+        width: 50px;
+    }
+    #TrainHourInput, #TrainMinuteInput {
+        height: 20px;
+        width: 50px;
+    }
+    .qwerty {
+        display: flex;
+        justify-content: center;
+        margin: 0px 20px 20px 0px;
+    }
+    h2 {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    #prosto {
+        display: flex;
+        justify-content: center;
+    }
+    #prosto2 {
+        display: flex;
+        justify-content: center;
+    }
+    #TrainOutput {
+        display: flex;
+        justify-content: center;
+    }
+    header {
+        background-color: white;
+        width: 500px;
+        height: 350px;
+        border-radius: 10px;
+        margin: 210px 50px;
+    }
+    
+</style>
+
+<body>
+    <header>
+    <h2>Поезд</h2>
+    <p id="prosto">Введите время прибытия вашего поезда:</p>
+    <Div class="qwerty">
+    <input type="text" id="HourInput" placeholder="Часы">
+        <p style="margin: 0px 5px;">:</p>
+        <input type="text" id="MinuteInput" placeholder="Минуты">
+    </Div>
+    <p id="prosto2">Введите время вашего прибытия:</p>
+    <div class="qwerty">
+    <input type="text" id="TrainHourInput" placeholder="Часы">
+    <p style="margin: 0px 5px;">:</p>
+    <input type="text" id="TrainMinuteInput" placeholder="Минуты">
+    </div>
+    <button style="margin: 0px 200px;" onclick="checkTrainTime()">Проверить</button>
+    
+    <p id="TrainOutput"></p>
+    </header>
+    <script>
+        function checkTrainTime() {
+            var hour = parseInt(document.getElementById('HourInput').value);
+            var minute = parseInt(document.getElementById('MinuteInput').value);
+            var trainHour = parseInt(document.getElementById('TrainHourInput').value);
+            var trainMinute = parseInt(document.getElementById('TrainMinuteInput').value);
+            var trainOutput = document.getElementById('TrainOutput');
+
+            if (hour > 24 || minute > 59 || trainHour > 24 || trainMinute > 59) {
+                trainOutput.innerText = 'Вы ввели неправильное время.';
+            } else if (hour < trainHour || (hour === trainHour && minute < trainMinute)) {
+                trainOutput.innerText = 'Поезд уже ушел.';
+            } else if (hour === trainHour && minute === trainMinute) {
+                trainOutput.innerText = 'Вы только что успели на поезд!';
+            } else {
+                trainOutput.innerText = 'Вы успеваете на поезд!';
+            }
+        }
+    </script>
+</body>
+</html>
+
+     
