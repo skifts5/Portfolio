@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <title>Портфолио</title>
+        <style>
+            @font-face {
+                font-family: 'Pomidor';
+                src: url(Pomidor.otf);
+            }
+            html {
+                scroll-behavior: smooth;
+            }   
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                
+            }
+            .text {
+                width: 100%;
+                height: 100%;
+                background: url(../портфолио/Основное/diego-ph-SZYreZsJ-fE-unsplash.jpg);
+                background-size: 918px 864px;
+                background-position: right top;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+
+            }
+            .content {
+                padding: 250px 60px;
+            }
+            h1 {
+                font-family: 'Pomidor', sans-serif;
+                color: rgb(34, 67, 96);
+                font-size: 100px;
+                margin: 0px;
+                padding-bottom: 20px;
+            }
+            p {
+                letter-spacing: 1px;
+                color: rgb(0, 0, 0);
+                text-align: left;
+                font-size: 16px;
+                
+            }
+            .name {
+                background-color: rgb(34, 67, 96);
+                width: 200px;
+                height: 60px;
+                border-radius: 10px;
+                margin-top: -10px;
+                margin-left: 60px;
+                justify-content: center;
+                display: flex;
+                position: fixed;
+            }
+            .name p {
+                letter-spacing: 1px;
+                padding: 10px;
+                color: white;
+                font-weight: bold;
+            }
+            nav ul {
+               position: fixed;
+               top: 0;
+               right: 0;
+               list-style: none;
+               color: rgb(0, 0, 0);
+               text-align: right;
+               padding: 0;
+               margin-right: 60px;
+               margin-top: 0;
+               margin-bottom: 0;
+            }
+            nav ul li {
+               letter-spacing: 1px;
+               display: inline-block;
+               padding: 20px;
+            }
+            nav ul li a {
+               text-decoration: none;
+               color: rgb(34, 67, 96);
+               font-weight: bold;
+            }
+            .graphic {
+                display: inline-block;
+            }
+            .graphic h2 {
+                font-size: 34px;
+                text-align: right;
+                color: rgb(34, 67, 96);
+                margin: 60px;
+            }
+            .graphic img {
+                padding: 20px;
+                max-width: 100%;
+                height: auto;
+            }
+            .about img {
+                float: left;
+                padding: 60px;
+                margin-top: 30px;
+            }
+            .text2 {
+                display: inline-block;
+                width: 800px;
+                padding: 40px;
+                margin-top: 160px;
+            } 
+            .text2 p {
+                letter-spacing: 1px;
+                text-align: justify;
+            }
+            .text2 h2 {
+                font-size: 34px;
+                color: rgb(34, 67, 96);
+            }
+            .programming {
+                margin: 50px;
+            }
+            .programming a {
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                background-color: rgb(34, 67, 96);
+                padding: 20px 50px;
+                margin: 10px;
+            }
+            .programming h2 {
+                font-size: 34px;
+                text-align: left;
+                margin: 30px 10px;
+                color: rgb(34, 67, 96);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="text" id="text">
+                <div class="name">
+                    <p>Бутерус Валерия</p>
+                </div>
+                <nav>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#text">Главная</a></li>
+                            <li><a href="#about">Обо мне</a></li>
+                            <li><a href="#graphic">Графический дизайн</a></li>
+                            <li><a href="#programming">Разработка веб-страниц</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="content">
+                    <h1>Портфолио</h1>
+                    <p><strong>На протяжении этого учебного года мы занимались <br> различными увлекательными заданиями. <br> 
+                    На этой странице будут представлены многие работы. </strong> </p>
+                </div>
+            </div>  
+        </header>
+        <main>
+            <div class="about" id="about">
+                <img src="../портфолио/Основное/photo1718220975.jpeg" style="width: 400px; height: 526px;">
+                <div class="text2"><h2>Обо мне</h2>
+                <p><strong>Я студентка второго курса из группы ИС-922 - Бутерус Валерия.</strong> 
+                В этом году мы изучали различные дисциплины, которые сильно развили мои навыки: 
+                привили чувство стиля, научили работать с программами для обработки изображений, 
+                создавали векторы, дизайны сайтов, научили их самостоятельно писать и добавлять в 
+                них логическую составляющую. На этой странице я хочу продемонстрировать все полученные мною знания в этом учебном году.</p> </div>
+            </div>
+            <div class="graphic">
+                <h2 id="graphic">Графический дизайн</h2>
+                <img src="../портфолио/Графика/бенгальский огонь.png" style="width: 400px; height: 450px;">
+                <img src="../портфолио/Графика/винтажный стиль.png" style="width: 610px; height: 450px;">
+                <img src="../портфолио/Графика/постер 3.png" style="width: 304px; height: 450px;">
+                <img src="../портфолио/Графика/новы гот.png" style="width: 730px; height: 450px;">
+                <img src="../портфолио/Графика/открытка новогодняя.png" style="width: 342px; height: 450px;">
+                <img src="../портфолио/Графика/арбуз.png" style="width: 270px; height: 450px;">
+                <img src="../портфолио/Графика/поп арт.png" style="width: 326px; height: 450px;">
+                <img src="../портфолио/Графика/паттерн новогодний.png" style="width: 450px; height: 450px;">
+                <img src="../портфолио/Графика/постер 2.png" style="width: 565px; height: 450px;">
+                <img src="../портфолио/Графика/постер 1.png" style="width: 326px; height: 450px;">
+                <img src="../портфолио/Графика/текст с жидкостью.png" style="width: 681px; height: 450px;">
+                <img src="../портфолио/Графика/шляпник типографика.png" style="width: 300px; height: 450px;">
+            </div>
+            <div class="programming" id="programming">
+                <h2>Веб-разработка</h2>
+                <a href="../портфолио/Веб разработка/буквы2.html">Выявление букв М Ы и А в слове</a>
+                <a href="../портфолио/Веб разработка/вес боксера.html">Распределение веса боксеров по категориям</a>
+                <a href="../портфолио/Веб разработка/кодик.html">Поиск клада</a>
+                <a href="../портфолио/Веб разработка/месяцы.html">Вычисление месяцев</a>
+                <a href="../портфолио/Веб разработка/переменные.html">Распределение чисел от большего к меньшему</a>
+                <a href="../портфолио/Веб разработка/поезд.html">Успеет ли пассажир на поезд?</a>
+                <a href="../портфолио/Веб разработка/светофор2.html">Светофор</a>
+                <a href="../портфолио/Веб разработка/четыре числа.html">Поиск четных цифр</a>
+                <a href="../портфолио/Веб разработка/Сказка.html">Сказка про Палочко-человека.</a>
+                <a href="../портфолио/Веб разработка/сумма.html">Сумма цифр в числе</a>
+                <a href="../портфолио/Веб разработка/четырехзнач.html">Поиск четных цифр в числе</a>
+                <a href="../портфолио/Веб разработка/чо.html">Сумма наибольших цифр в числе</a>
+                <a href="../портфолио/Веб разработка/что больше.html">Что больше - площадь круга или квадрата?</a>
+                <a href="../портфолио/Веб разработка/эээм.html">Квадрат какого числа больше?</a>
+                <a href="../портфолио/Веб разработка/языки.html">Языки</a>
+            </div>
+        </main>
+    </body>
+</html>
